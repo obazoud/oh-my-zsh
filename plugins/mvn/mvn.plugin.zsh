@@ -290,3 +290,7 @@ function listMavenCompletions {
 compctl -K listMavenCompletions mvn
 compctl -K listMavenCompletions mvn-or-mvnw
 
+# olivier
+# compdef mvn mvnDebug
+# mvn completion
+#
