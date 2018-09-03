@@ -71,3 +71,6 @@ export KITCHEN_SYNC_MODE="rsync"
 
 # added by travis gem
 [ -f /home/obazoud/.travis/travis.sh ] && source /home/obazoud/.travis/travis.sh
+
+alias cat='bat'
+
