@@ -25,7 +25,7 @@ function git_uptream_info() {
 
 #PROMPT=$'%{$fg_bold[blue]%}%D{[%I:%M:%S]} %{$fg_bold[green]%}%n@%m %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(git_prompt_info)\
 #%{$fg_bold[magenta]%}%{$fg_bold[magenta]%} %#%{$reset_color%} '
-PROMPT=$'%{$fg_bold[blue]%}%D{[%I:%M:%S]} %{$fg_bold[green]%}%n@%m %{$reset_color%}$(git_prompt_info)\
+PROMPT=$'%{$fg_bold[blue]%}%D{[%H:%M:%S]} %{$fg_bold[green]%}%n@%m %{$reset_color%}$(git_prompt_info)\
 %{$fg_bold[magenta]%}%{$fg_bold[magenta]%} %#%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[red]%}( "

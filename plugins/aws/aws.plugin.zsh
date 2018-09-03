@@ -27,6 +27,11 @@ function agp {
   echo $AWS_DEFAULT_PROFILE
 }
 
+
+function aws_by_role {       
+  aws ec2 describe-instances --filters "Name=tag:ogury:role,Values=$1" --query 'Reservations[].Instances[].[ [Tags[?Key==`Name`].Value][0][0],PrivateIpAddress,PublicDnsName,InstanceId]' --output table --region $2 
+}
+
 function asp {
   local rprompt=${RPROMPT/<aws:$(agp)>/}
 

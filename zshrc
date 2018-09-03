@@ -27,7 +27,7 @@ CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mvn svn github node npm nvm heroku grails ruby rvm rails gem vagrant knife knife_ssh )
+plugins=(aws git mvn svn github node npm nvm heroku grails ruby rails gem vagrant knife knife_ssh )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,8 +39,8 @@ unsetopt inc_append_history
 maven_plugins=(dependency help hibernate3 jetty tomcat6 tomcat7 versions)
 zstyle ':completion:*:mvn:*' plugins $maven_plugins
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export JAVA_HOME=/opt/java/default
 PATH=$PATH:$JAVA_HOME/bin
@@ -54,6 +54,7 @@ PATH=$PATH:$GRADLE_HOME/bin
 
 PATH=$PATH:/usr/local/bin:/usr/local
 PATH=$PATH:/home/obazoud/bin/
+PATH=$PATH:/usr/local/go/bin
 
 alias java='nocorrect java'
 
@@ -65,3 +66,8 @@ fi
 
 export KITCHEN_SYNC_MODE="rsync"
 
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# added by travis gem
+[ -f /home/obazoud/.travis/travis.sh ] && source /home/obazoud/.travis/travis.sh
